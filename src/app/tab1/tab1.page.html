@@ -7,6 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <amplify-photo-picker path="test1"></amplify-photo-picker>
+  <amplify-photo-picker
+    path="test1"
+    (uploaded)="onImageUploaded($event)"
+  ></amplify-photo-picker>
   <amplify-s3-album path="test1"></amplify-s3-album>
 </ion-content>
