@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 
 import { AmplifyService, AmplifyModules } from 'aws-amplify-angular';
 import Auth from '@aws-amplify/auth';
+import Storage from '@aws-amplify/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import Auth from '@aws-amplify/auth';
       useFactory: () => {
         return AmplifyModules({
           Auth,
+          Storage,
         });
       },
     },

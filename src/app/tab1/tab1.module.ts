@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AmplifyAngularModule } from 'aws-amplify-angular';
 import { Tab1Page } from './tab1.page';
 
 @NgModule({
@@ -10,8 +11,9 @@ import { Tab1Page } from './tab1.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab1Page }])
+    RouterModule.forChild([{ path: '', component: Tab1Page }]),
+    AmplifyAngularModule,
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page],
 })
 export class Tab1PageModule {}
