@@ -1,0 +1,6 @@
+<div class="s3-image-uploader">
+  <input type="file" accept="image/*" (change)="pick($event)" />
+  <button *ngIf="file" (click)="uploadFile()">
+    Upload Photo
+  </button>
+</div>
