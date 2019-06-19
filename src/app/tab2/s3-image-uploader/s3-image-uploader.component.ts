@@ -1,4 +1,4 @@
-import { Component, Inject, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { AmplifyService } from 'aws-amplify-angular';
 
 @Component({
@@ -12,9 +12,7 @@ export class S3ImageUploaderComponent {
   @Output()
   uploaded: EventEmitter<object> = new EventEmitter<object>();
 
-  constructor(
-    @Inject(AmplifyService) protected amplifyService: AmplifyService,
-  ) {}
+  constructor(protected amplifyService: AmplifyService) {}
 
   pick(evt) {
     const file = evt.target.files[0];
